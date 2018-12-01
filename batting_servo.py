@@ -7,13 +7,16 @@ class Batting_Servo(object):
     def __init__(self, bus_number=1):
         self.wheel = Servo.Servo(self.channel, bus_number=bus_number, offset=10)
         self.wheel.setup()
-        self.wheel.write(-150)
+        self.set_default()
 
-    def test(self, angle=270):
+    def set_default(self, angle=-150):
+        self.wheel.write(angle)
+
+    def batting(self, angle=270):
         self.wheel.write(angle)
 
 
 if __name__ == "__main__":
     bat = Batting_Servo()
     sleep(1)
-    bat.test()
+    bat.batting()
