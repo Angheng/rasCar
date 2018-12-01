@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
     try:
         while(1):
-            print(cd.colour_detector.get_raw_data())
+            print(cd.get_red(), cd.get_green(),cd.get_blue())
 
             if cd.is_red():
                 print('red')
