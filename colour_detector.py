@@ -40,10 +40,11 @@ class Colour_Detector(object):
 
 if __name__ == "__main__":
     cd = Colour_Detector()
-    print(cd.colour_detector.get_raw_data())
 
     try:
         while(1):
+            print(cd.colour_detector.get_raw_data())
+
             if cd.is_red():
                 print('red')
             elif cd.is_blue():
