@@ -8,7 +8,7 @@ class Colour_Detector(object):
 
         self.red_range = [[0, 255], [0, 80], [0, 80]]
         self.green_range = [[0, 80], [0, 255], [0, 80]]
-        self.blue = [[0, 80], [0, 80], [0, 255]]
+        self.blue_range = [[0, 80], [0, 80], [0, 255]]
 
     def is_red(self):
         return self.red_range[0][0] <= self.get_red() <= self.red_range[0][1] \
