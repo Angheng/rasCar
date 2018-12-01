@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     btnPin = 7
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(btnPin, GPIO.In)
+    GPIO.setup(btnPin, GPIO.IN)
 
     before_input = 0
     while True:
