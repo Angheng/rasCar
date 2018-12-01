@@ -6,9 +6,9 @@ class Colour_Detector(object):
     def __init__(self):
         self.colour_detector = TCS34725_RGB.TCS34725()
 
-        self.red_range = [[100, 500], [0, 80], [0, 80]]
-        self.green_range = [[0, 80], [100, 500], [0, 80]]
-        self.blue_range = [[0, 80], [0, 80], [100, 500]]
+        self.red_range = [[100, 500], [0, 200], [0, 200]]
+        self.green_range = [[0, 200], [100, 500], [0, 200]]
+        self.blue_range = [[0, 200], [0, 200], [100, 500]]
 
     def is_red(self):
         return self.red_range[0][0] <= self.get_red() <= self.red_range[0][1] \
