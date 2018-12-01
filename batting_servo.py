@@ -18,20 +18,4 @@ class Batting_Servo(object):
 
 if __name__ == "__main__":
     bat = Batting_Servo()
-
-    import RPi.GPIO as GPIO
-
-    btnPin = 7
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(btnPin, GPIO.IN)
-
-    before_input = 0
-    while True:
-        button_input = GPIO.input(btnPin)
-
-        if button_input is 1:
-            bat.batting()
-            bat.set_position()
-        if button_input != before_input:
-            print(button_input)
-        before_input = button_input
+    bat.batting()

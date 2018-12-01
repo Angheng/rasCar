@@ -63,10 +63,6 @@ class Car(object):
             currentStat = ""
             for x in self.line.read_digital():
                 currentStat += str(x)
-<<<<<<< HEAD
-            #print(currentStat)
-=======
->>>>>>> 07e61da7eb2ece00c372a3ed8bc9a129749dd581
 
             if currentStat == lineStat.leftDegree_35:
                 self.drive.forward_with_speed(80)
